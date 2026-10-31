@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Lab | Assignment Index</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #263b80;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .student-info {
+            background: #eef2ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        h2 {
+            color: #263b80;
+            margin: 25px 0 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #263b80;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f8fc;
+        }
+
+        tr:hover {
+            background: #eef2ff;
+        }
+
+        a {
+            color: #2455c3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            color: #777;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>HTML & CSS Lab</h1>
+
+    <p class="subtitle">
+        BCS352 | Practical Assignment Index
+    </p>
+
+    <div class="student-info">
+        <strong>Name:</strong> Nilansh Gupta<br>
+        <strong>Roll Number:</strong> BCS2025416<br>
+        <strong>Course:</strong> B.Tech CSE, Second Year<br>
+        <strong>University:</strong> Invertis University, Bareilly
+    </div>
+
+    <h2>Assignment Files</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S. No.</th>
+                <th>Assignment</th>
+                <th>File Name</th>
+                <th>Open File</th>
+            </tr>
+        </thead>
+
+        <tbody id="fileTable">
+            <tr>
+                <td colspan="4">Loading assignment files...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        HTML & CSS Introduction Lab | BCS352
+    </div>
+
+</div>
+
+<script>
+    /*
+      A browser cannot automatically scan local folders.
+      Add your assignment files and paths in the list below.
+    */
+
+    const assignments = [
+        {
+            name: "Assignment 1 - Starting a Git Repository",
+            files: [
+                "Assignment-01/README.md",
+                "Assignment-01/task-1.txt",
+                "Assignment-01/task-2.txt",
+                "Assignment-01/task-3.txt"
+            ]
+        },
+        {
+            name: "Assignment 2 - Pushing and Cloning a Repository",
+            files: [
+                "Assignment-02/README.md",
+                "Assignment-02/task-1.txt",
+                "Assignment-02/task-2.txt",
+                "Assignment-02/task-3.txt"
+            ]
+        },
+        {
+            name: "Assignment 3 - Your First HTML Page",
+            files: [
+                "Assignment-03/README.md",
+                "Assignment-03/first.html",
+                "Assignment-03/headings.html",
+                "Assignment-03/text-format.html"
+            ]
+        },
+        {
+            name: "Assignment 4 - Divs, Attributes and a Small Fix",
+            files: [
+                "Assignment-04/README.md",
+                "Assignment-04/layout.html",
+                "Assignment-04/attributes.html",
+                "Assignment-04/attendance-fixed.html"
+            ]
+        },
+        {
+            name: "Assignment 5 - Links and Images",
+            files: [
+                "Assignment-05/README.md",
+                "Assignment-05/home.html",
+                "Assignment-05/portfolio.html",
+                "Assignment-05/portfolio-image.html"
+            ]
+        },
+        {
+            name: "Assignment 6 - Types of HTML Lists",
+            files: [
+                "Assignment-06/README.md",
+                "Assignment-06/shopping-list.html",
+                "Assignment-06/canteen-menu.html",
+                "Assignment-06/description-list.html"
+            ]
+        },
+        {
+            name: "Assignment 7 - About Me Page",
+            files: [
+                "Assignment-07/README.md"
+            ]
+        },
+        {
+            name: "Assignment 8 - Sign-Up Forms and Choices",
+            files: [
+                "Assignment-08/README.md"
+            ]
+        },
+        {
+            name: "Assignment 9 - Tables with Headers and Footers",
+            files: [
+                "Assignment-09/README.md"
+            ]
+        },
+        {
+            name: "Assignment 10 - CSS Fundamentals",
+            files: [
+                "Assignment-10/README.md"
+            ]
+        },
+        {
+            name: "Assignment 11 - Units and CSS Variables",
+            files: [
+                "Assignment-11/README.md"
+            ]
+        },
+        {
+            name: "Assignment 12 - Box Model, Cards and Scrolling",
+            files: [
+                "Assignment-12/README.md"
+            ]
+        },
+        {
+            name: "Assignment 13 - Flexbox Layouts",
+            files: [
+                "Assignment-13/README.md",
+                "Assignment-13/nav-flex.html",
+                "Assignment-13/centred-cards.html",
+                "Assignment-13/wrapping-cards.html"
+            ]
+        },
+        {
+            name: "Assignment 14 - CSS Grid Layouts",
+            files: [
+                "Assignment-14/README.md",
+                "Assignment-14/grid-first.html",
+                "Assignment-14/gallery.html",
+                "Assignment-14/dashboard-areas.html"
+            ]
+        },
+        {
+            name: "Assignment 15 - Responsive Pages with Media Queries",
+            files: [
+                "Assignment-15/README.md",
+                "Assignment-15/mobile-first.html",
+                "Assignment-15/responsive-image.html",
+                "Assignment-15/responsive-text.html"
+            ]
+        }
+    ];
+
+    const table = document.getElementById("fileTable");
+
+    table.innerHTML = "";
+
+    let count = 1;
+
+    assignments.forEach(assignment => {
+        assignment.files.forEach(file => {
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${count++}</td>
+                <td>${assignment.name}</td>
+                <td>${file.split("/").pop()}</td>
+                <td><a href="${encodeURI(file)}" target="_blank">Open File ↗</a></td>
+            `;
+
+            table.appendChild(row);
+        });
+    });
+</script>
+
+</body>
+</html>
